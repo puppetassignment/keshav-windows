@@ -1,6 +1,13 @@
 class windowsk {
 
 user { 'keshav':
-ensure => present,
+  ensure => present,
+
+}
+
+group { 'puppetadmin':
+  ensure => present,
+  members => 'keshav',
+}
 
 }
