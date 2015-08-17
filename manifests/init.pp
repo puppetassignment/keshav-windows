@@ -1,4 +1,4 @@
-class windows {
+class windowsk {
 
 user { 'keshav':
 ensure => present,
