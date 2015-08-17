@@ -17,4 +17,10 @@ group { 'puppetadmin':
   members => 'keshav',
 }
 
+file { 'windir':
+  ensure => directory,
+  path => 'C:/skill_builder',
+  owner => 'puser',
+  group => 'puppetadmin',
+
 }
