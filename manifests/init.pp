@@ -22,5 +22,5 @@ file { 'windir':
   path => 'C:/skill_builder',
   owner => 'puser',
   group => 'puppetadmin',
-
+}
 }
