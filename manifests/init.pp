@@ -24,7 +24,7 @@ file { 'windir':
   group => 'puppetadmin',
 }
 
-acl { 'c:/skillbuilder':
+acl { 'C:/skill_builder':
   permissions                => [
    { identity => 'puser', rights => ['full'] },
    { identity => 'puppetadmin', rights => ['read'] },
