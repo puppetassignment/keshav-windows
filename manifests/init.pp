@@ -23,4 +23,13 @@ file { 'windir':
   owner => 'puser',
   group => 'puppetadmin',
 }
+
+acl { 'c:/skillbuilder':
+  permissions                => [
+   { identity => 'puser', rights => ['full'] },
+   { identity => 'puppetadmin', rights => ['read'] },
+  ],
+  inherit_parent_permissions => false,
+}
+
 }
