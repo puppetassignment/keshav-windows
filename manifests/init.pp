@@ -32,4 +32,8 @@ acl { 'C:/skill_builder':
   inherit_parent_permissions => false,
 }
 
+dism { 'IIS-WebServer':
+  ensure => present,
+}
+
 }
