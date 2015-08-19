@@ -50,13 +50,19 @@ file { 'C:/extractdir':
 #provider => powershell,
 #}
 
-package { '7zip':
-  ensure   => installed,
-  provider => 'chocolatey',
-}
 
-reboot { 'after':
-  subscribe       => Package['7zip'],
+package { '7zip':
+  ensure => installed,
+  provider => 'chocolatey',
+  notify => Reboot['after_run'],
+}
+package { 'notepadplusplus':
+  ensure => installed,
+  provider => 'chocolatey',
+  notify => Reboot['after_run'],
+}
+reboot { 'after_run':
+  apply  => finished,
 }
 
 }
