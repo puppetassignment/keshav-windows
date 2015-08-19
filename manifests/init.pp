@@ -36,9 +36,13 @@ acl { 'C:/skill_builder':
 #  ensure => present,
 #}
 
+file { 'C:/extractdir':
+  ensure => directory,
+  }
+
 staging::deploy { '7za920.zip':
   source => 'puppet:///modules/windowsk/7za920.zip',
-  target => '/usr/local',
+  target => 'C:/extractdir',
 }
 
 
