@@ -40,9 +40,14 @@ file { 'C:/extractdir':
   ensure => directory,
   }
 
-staging::deploy { '7za920.zip':
-  source => 'puppet:///modules/windowsk/7za920.zip',
-  target => 'C:/extractdir',
+#staging::deploy { '7za920.zip':
+#  source => 'puppet:///modules/windowsk/7za920.zip',
+#  target => 'C:/extractdir',
+#}
+
+package { '7zip':
+  ensure   => installed,
+  provider => 'chocolatey',
 }
 
 
