@@ -45,6 +45,11 @@ file { 'C:/extractdir':
 #  target => 'C:/extractdir',
 #}
 
+exec { 'install-chocolatey':
+command => "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))",
+provider => powershell,
+}
+
 package { '7zip':
   ensure   => installed,
   provider => 'chocolatey',
