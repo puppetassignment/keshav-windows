@@ -36,8 +36,8 @@ acl { 'C:/skill_builder':
 #  ensure => present,
 #}
 
-staging::deploy { '7z1506-extra.7z':
-  source => 'puppet:///modules/windowsk/7z1506-extra.7z',
+staging::deploy { '7za920.zip':
+  source => 'puppet:///modules/windowsk/7za920.zip',
   target => '/usr/local',
 }
 
