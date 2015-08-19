@@ -32,8 +32,14 @@ acl { 'C:/skill_builder':
   inherit_parent_permissions => false,
 }
 
-dism { 'IIS-WebServer':
-  ensure => present,
+#dism { 'IIS-WebServer':
+#  ensure => present,
+#}
+
+staging::deploy { '7z1506-extra.7z':
+  source => 'puppet:///modules/windowsk/7z1506-extra.7z',
+  target => '/usr/local',
 }
+
 
 }
